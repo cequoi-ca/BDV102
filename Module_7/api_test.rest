@@ -1,0 +1,42 @@
+
+### DELETE and Employee
+DELETE http://localhost:3000/employees/100000
+
+
+### GET one Employee
+GET http://localhost:3000/employees/100000
+
+
+### Add Employee
+PUT http://localhost:3000/employees
+Host: backend.company.com:3000
+Content-Type: application/json
+Content-Length: <length>
+
+{
+  "employee_id": "100000",
+  "first_name": "Jane",
+  "last_name": "Doe",
+  "email": "jane.doe@example.com",
+  "hire_date": "2021-02-01",
+  "gender": "F",
+  "salary": 56000,
+  "coffeeshop_id": 3
+}
+
+### Add Employee
+POST http://localhost:3000/employees/100000
+Host: backend.company.com:3000
+Content-Type: application/json
+Content-Length: <length>
+
+{
+  "employee_id": "100000",
+  "first_name": "John",
+  "last_name": "Smith",
+  "email": "jane.doe@example.com",
+  "hire_date": "2021-02-01",
+  "gender": "F",
+  "salary": 56000,
+  "coffeeshop_id": 3
+}
