@@ -1,6 +1,10 @@
+# Module 6
+
+
+## Install Dependencies
 
 ```
-npm init .
-npm install pg dotenv
+npm init -y
+npm install pg dotenv sequelize dotenv --save
 npm install jest --save-dev
 ```
