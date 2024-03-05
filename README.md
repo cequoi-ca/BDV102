@@ -55,20 +55,5 @@ For a visual overview of installation and usage view the following youtube prese
 example
 ```
 ### GET one Employee
-GET http://localhost:3000/employees/100000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+GET http://:3000/employees/100000
 ```
