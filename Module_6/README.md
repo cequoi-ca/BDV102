@@ -15,7 +15,7 @@ and test driven development. Through the jest test framework you will run proced
 - update the file `.env` with your database credentials
 [Neon Documentation](https://neon.tech/docs/connect/connect-from-any-app)
 example
-```
+```sh
 PGUSER=alex
 PGHOST=ep-cool-darkness-123456.us-east-2.aws.neon.tech
 PGDATABASE=dbname
@@ -35,7 +35,7 @@ Create files with your tests. By default, Jest looks for test files with any of 
 
 A basic test file might look something like this:
 
-```javascript
+```js
 // sum.test.js
 const sum = require('./sum');
 
@@ -73,7 +73,7 @@ describe('app', () => {
 2. 'beforeAll Hook: 
 This is a Jest lifecycle hook that runs a piece of code before all the tests in a describe block run. It's useful for setup that you want to perform once before all your tests run. For example, in this project you use it to connect to a database and to set up any global state needed for all tests.
 
-```javascript
+```js
 beforeAll(() => {
   // Code to run before all tests
 });
@@ -82,7 +82,7 @@ beforeAll(() => {
 
 3. test Function: This function defines an individual test case. It takes two arguments: a string describing the test and a callback function that contains the test's code. The callback function is where you will place your test logic, using expect statements to test your code.
 
-```javascript
+```js
 test('Iinsert new Employee', () => {
   // Test logic goes here
 });
@@ -101,20 +101,20 @@ Putting it all together in a single block:
 ```js
 describe('app', () => {
   beforeAll(() => {
-    // Initialization or setup code runs here
-    // For example, setting up database connections
+    // Initialization or setup code runs here and
+    // setts up connection to neon and create database
   });
 
-  test('does something', () => {
+  test('Create an employee with SQL', () => {
     // Actual test case
     // Here you can use expect() to test your assumptions
     expect(true).toBe(true); // An example assertion
   });
 
   // You can have multiple test cases within a describe block
-  test('does something else', () => {
+  test('Update an employee with SQL', () => {
     // Another test case
-    expect(2 + 2).toBe(4); // Another example assertion
+    expect(true).toBe(true); // An example assertion
   });
 });
 
