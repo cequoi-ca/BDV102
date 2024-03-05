@@ -120,7 +120,7 @@ Start the server with command
 node sample-server.js
 ```
 
-## Tessting the REST API with REST Client
+## Testing the REST API with REST Client
 Create a file sample.rest with the following content for the VScode rest plugin.
 ```
 ###
