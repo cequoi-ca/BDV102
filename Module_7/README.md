@@ -85,7 +85,8 @@ app.use((req, res, next) => {
 });
 ```
 
-### Putting it all together 
+### Putting it all together.
+Copy the contents below to file `sample-server.js`
 ```js
 const express = require('express');
 const app = express();
@@ -113,4 +114,29 @@ app.put('/employees', (req, res) => {
   res.send('Data received');
 });
 
+
+Start the server with command
+```
+node sample-server.js
+```
+
+## Tessting the REST API with REST Client
+Create a file sample.rest with the following content for the VScode rest plugin.
+```
+###
+http://localhost:3000/employees/1
+```
+
+The plugin will activate a link `Send Request`, click the link to send the request.
+
+```
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 26
+ETag: W/"1a-dyvhDbVrBG5s5BATZfhTpHT6uak"
+Date: Tue, 05 Mar 2024 15:19:00 GMT
+Connection: close
+
+Data of employee with id 1
 ```
